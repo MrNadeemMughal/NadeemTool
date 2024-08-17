@@ -26,10 +26,7 @@ def download_plot(fig, format='png'):
 # Function to provide a description of the chart based on user's selection
 def chart_description(chart_type, analysis_type):
     descriptions = {
-        "Histogram": (
-            "A histogram is used to visualize the distribution of a single continuous numerical variable. "
-            "**Variable Type:** Continuous or discrete numerical variables."
-        ),
+        
         "Box Plot": (
             "A box plot displays the distribution of a numerical variable and identifies outliers. "
             "**Variable Type:** Continuous numerical variables."
