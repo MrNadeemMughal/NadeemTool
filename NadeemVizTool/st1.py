@@ -206,7 +206,7 @@ if st.session_state.page == "Home":
     - Multiple types of plots for univariate, bivariate, and multivariate analysis.
 
     """)
-    st.image("HomePageImage.jpg", use_column_width=True)
+    st.image("./HomePageImage.jpg", use_column_width=True)
 
 # About Us page content
 elif st.session_state.page == "About Us":
@@ -227,7 +227,7 @@ elif st.session_state.page == "About Us":
     Have questions? Feel free to reach out to us at [mr.nadeempredictermodeler@gmail.com](mailto:support@datavisualization.com).
 
     """)
-    st.image("AboutUsPage.jpg", use_column_width=True)
+    st.image("./AboutUsPage.jpg", use_column_width=True)
 
 # Visualization page content
 elif st.session_state.page == "Visualization":
