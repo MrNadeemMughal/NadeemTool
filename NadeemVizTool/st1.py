@@ -3,7 +3,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from io import BytesIO
-import requests
 
 # Function to load and process the file
 def load_file(file):
@@ -157,11 +156,11 @@ st.markdown("""
         }
         div[data-baseweb="select"] > div:hover {
             background-color: red !important;
-            color: white !important;
+            color: white !important.
         }
         div[data-baseweb="select"] > div:focus-within {
             background-color: red !important;
-            color: white !important;
+            color: white !important.
         }
     </style>
     """, unsafe_allow_html=True)
@@ -175,8 +174,6 @@ if st.sidebar.button("About Us"):
     st.session_state.page = "About Us"
 if st.sidebar.button("Visualization"):
     st.session_state.page = "Visualization"
-if st.sidebar.button("Documentation"):
-    st.session_state.page = "Documentation"
 
 # Set the default page if none is selected
 if 'page' not in st.session_state:
@@ -402,21 +399,6 @@ elif st.session_state.page == "Visualization":
 
     else:
         st.info("Please upload a data file to get started.")
-
-# Documentation Page content
-elif st.session_state.page == "Documentation":
-    st.title("Project Documentation")
-    st.markdown("### Download the full documentation as a PDF below:")
-    
-    # Fetch the PDF from the URL
-    url = "https://raw.githubusercontent.com/MrNadeemMughal/NadeemTool/main/NadeemVizTool/documentation.pdf"
-    headers = {'User-Agent': 'Mozilla/5.0'}
-    response = requests.get(url, headers=headers)
-    
-    if response.status_code == 200:
-        st.download_button(label="Download PDF", data=response.content, file_name="Project_Documentation.pdf")
-    else:
-        st.error(f"Failed to download the documentation. Status code: {response.status_code}. Please check the URL or try again later.")
 
 # Footer
 st.markdown("""
