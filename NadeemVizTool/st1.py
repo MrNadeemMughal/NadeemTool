@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from io import BytesIO
-
+import requests
 
 # Function to load and process the file
 def load_file(file):
@@ -407,7 +407,15 @@ elif st.session_state.page == "Visualization":
 elif st.session_state.page == "Documentation":
     st.title("Project Documentation")
     st.markdown("### Download the full documentation as a PDF below:")
-    st.download_button(label="Download PDF", data=open("https://raw.githubusercontent.com/MrNadeemMughal/NadeemTool/main/NadeemVizTool/documentation.pdf", "rb"), file_name="Project_Documentation.pdf")
+    
+    # Fetch the PDF from the URL
+    url = "https://raw.githubusercontent.com/MrNadeemMughal/NadeemTool/main/NadeemVizTool/documentation.pdf"
+    response = requests.get(url)
+    
+    if response.status_code == 200:
+        st.download_button(label="Download PDF", data=response.content, file_name="Project_Documentation.pdf")
+    else:
+        st.error("Failed to download the documentation. Please check the URL or try again later.")
 
 # Footer
 st.markdown("""
