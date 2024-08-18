@@ -174,6 +174,8 @@ if st.sidebar.button("About Us"):
     st.session_state.page = "About Us"
 if st.sidebar.button("Visualization"):
     st.session_state.page = "Visualization"
+if st.sidebar.button("Documentation"):
+    st.session_state.page = "Documentation"
 
 # Set the default page if none is selected
 if 'page' not in st.session_state:
@@ -399,6 +401,12 @@ elif st.session_state.page == "Visualization":
 
     else:
         st.info("Please upload a data file to get started.")
+
+# Documentation Page content
+elif st.session_state.page == "Documentation":
+    st.title("Project Documentation")
+    st.markdown("### Download the full documentation as a PDF below:")
+    st.download_button(label="Download PDF", data=open("documentation.pdf", "rb"), file_name="Project_Documentation.pdf")
 
 # Footer
 st.markdown("""
