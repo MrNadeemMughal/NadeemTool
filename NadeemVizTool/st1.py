@@ -410,12 +410,13 @@ elif st.session_state.page == "Documentation":
     
     # Fetch the PDF from the URL
     url = "https://raw.githubusercontent.com/MrNadeemMughal/NadeemTool/main/NadeemVizTool/documentation.pdf"
-    response = requests.get(url)
+    headers = {'User-Agent': 'Mozilla/5.0'}
+    response = requests.get(url, headers=headers)
     
     if response.status_code == 200:
         st.download_button(label="Download PDF", data=response.content, file_name="Project_Documentation.pdf")
     else:
-        st.error("Failed to download the documentation. Please check the URL or try again later.")
+        st.error(f"Failed to download the documentation. Status code: {response.status_code}. Please check the URL or try again later.")
 
 # Footer
 st.markdown("""
