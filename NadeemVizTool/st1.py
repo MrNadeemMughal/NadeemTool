@@ -407,7 +407,7 @@ elif st.session_state.page == "Visualization":
 elif st.session_state.page == "Documentation":
     st.title("Project Documentation")
     st.markdown("### Download the full documentation as a PDF below:")
-    st.download_button(label="Download PDF", data=open("documentation.pdf", "rb"), file_name="Project_Documentation.pdf")
+    st.download_button(label="Download PDF", data=open("https://raw.githubusercontent.com/MrNadeemMughal/NadeemTool/main/NadeemVizTool/documentation.pdf", "rb"), file_name="Project_Documentation.pdf")
 
 # Footer
 st.markdown("""
