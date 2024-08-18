@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from io import BytesIO
 
+
 # Function to load and process the file
 def load_file(file):
     if file.type == 'text/csv':
