@@ -221,7 +221,6 @@ elif st.session_state.page == "About Us":
     #### Meet the Team:
     - **Muhammad Nadeem**: Data Scientist - Passionate about transforming complex datasets into actionable insights and driving data-driven decision-making.
     - **Mehar Hamid Ishfaq**: Data Analyst - Expert in analyzing data trends and creating seamless user experiences through data-driven solutions.
-    - **Muhammad Bilal Butt**: UI/UX Designer - Focused on integrating data science with user experience to make data insights both beautiful and accessible.
 
     ### Contact Us:
     Have questions? Feel free to reach out to us at [mr.nadeempredictermodeler@gmail.com](mailto:support@datavisualization.com).
